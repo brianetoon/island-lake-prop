@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <b-container class="bv-example-row">
+    <b-container>
       <b-row>
           <b-col>1 of 3</b-col>
           <b-col>2 of 3</b-col>
@@ -23,5 +23,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.hello{
+  background: skyblue;
+}
 </style>
