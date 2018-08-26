@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-    <b-container>
-      <Navbar />
-      <b-row>
-        <b-col>
-          <b-img src="./assets/logo.png" fluid alt="Responsive image" />
-        </b-col>
-      </b-row>
-    </b-container>
+    <Navbar />
     <router-view></router-view>
+    <b-img src="./assets/logo-dark.png" fluid alt="logo" />
   </div>
 </template>
 
