@@ -1,19 +1,25 @@
 <template>
   <div class="home">
-    <b-jumbotron fluid class="home-jt">
-      <template slot="header">
-        Bootstrap Vue
-      </template>
-      <template slot="lead">
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </template>
-      <hr class="my-4">
-      <p>
-        It uses utility classes for typography and spacing to space content
-        out within the larger container.
-      </p>
-    </b-jumbotron>
+    <div class="home-jt d-flex">
+      <div class="wrapper">
+          <b-img src="../assets/logo-white.png" alt="logo"/>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <h2>col 1</h2>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <h2>col 2</h2>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <h2>col 3</h2>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -31,16 +37,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home-jt{
-  background-image: url("../assets/bg-2.jpg");
+  background-image: url("../assets/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 600px
+  min-height: 500px;
+  justify-content: center;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
 }
 h1,
 h2,
-h3,
-p{
-  color: white;
+h3{
+  font-family: "aviano-flare",sans-serif;
 }
 </style>

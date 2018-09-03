@@ -2,7 +2,6 @@
   <div id="app">
     <Navbar />
     <router-view></router-view>
-    <b-img src="./assets/logo-dark.png" fluid alt="logo" />
   </div>
 </template>
 
@@ -18,5 +17,12 @@ export default {
 </script>
 
 <style>
-
+h1,
+h2,
+h3,
+li,
+a,
+p{
+    font-family: "aviano-flare",sans-serif;
+}
 </style>
