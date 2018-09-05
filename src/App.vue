@@ -20,9 +20,12 @@ export default {
 h1,
 h2,
 h3,
+h4,
 li,
-a,
+a{
+  font-family: "aviano-flare",sans-serif;
+}
 p{
-    font-family: "aviano-flare",sans-serif;
+  font-family: "myriad-pro",sans-serif;
 }
 </style>

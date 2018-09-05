@@ -6,16 +6,44 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container pt-4">
       <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <h2>col 1</h2>
+        <div class="col-md-12 col-lg-4">
+          <div class="box">
+            <b-img src="../assets/vaca-rental.png" class="box-img" alt="vacation rentals"/>
+            <h3 class="pt-2">Vacation Rentals</h3>
+            <div class="text-area">
+              <p>See our vacation homes and learn about all the amenities they offer.</p>
+            </div>
+            <div class="d-none d-lg-block">
+              <b-img src="../assets/house.png" class="box-icon" alt="house icon"/>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-4">
-          <h2>col 2</h2>
+        <div class="col-md-12 col-lg-4">
+          <div class="box">
+            <b-img src="../assets/faqs.png" class="box-img" alt="vacation rentals"/>
+            <h3 class="pt-2">FAQs</h3>
+            <div class="text-area">
+              <p>What to pack? Nearby attractions? Find out all you need to know for a perfect getaway.</p>
+            </div>
+            <div class="d-none d-lg-block">
+              <b-img src="../assets/car.png" class="box-icon" alt="car icon"/>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-4">
-          <h2>col 3</h2>
+        <div class="col-md-12 col-lg-4">
+          <div class="box">
+            <b-img src="../assets/about-us.png" class="box-img d-block" alt="vacation rentals"/>
+            <h3 class="pt-2">About Us</h3>
+            <div class="text-area">
+              <p>Our Mission is to share the great times our family has enjoyed by providing welcoming 
+              vacation homes and unmatched service.</p>
+            </div>
+            <div class="d-none d-lg-block">
+              <b-img src="../assets/elevated.png" class="box-icon" alt="elevated icon"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -35,7 +63,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .home-jt{
   background-image: url("../assets/bg.jpg");
   background-position: center;
@@ -48,9 +76,34 @@ export default {
   display: flex;
   align-items: center;
 }
-h1,
-h2,
-h3{
+.box{
+  text-align: center;
+}
+.box h3{
+  color: #2A3B4E;
+  font-size: 20px;
   font-family: "aviano-flare",sans-serif;
+}
+.box-img{
+  width: 100%;
+  height: auto;
+}
+.box-icon{
+  width: 150px;
+  height: auto;
+}
+.text-area{
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+.text-area p{
+  color:  #2A3B4E;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 992px){
+  .text-area{
+    height: 100px;
+  }
 }
 </style>
