@@ -8,11 +8,10 @@
                 <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
                 <b-collapse is-nav id="nav_dropdown_collapse">
                     <b-navbar-nav class="ml-auto">
-                        <b-nav-item href="#" active>Home</b-nav-item>
-                        <b-nav-item href="#">Vacation Rentals</b-nav-item>
-                        <b-nav-item href="#">FAQs</b-nav-item>
-                        <b-nav-item href="#">About Us</b-nav-item>
-                        <b-nav-item href="#">Contact</b-nav-item>
+                        <b-link :to="{ name: 'Home' }">Home</b-link>
+                        <b-link :to="{ name: 'VacationRentals' }">Vacation Rentals</b-link>
+                        <b-link :to="{ name: 'Testimonials' }">Testimonials</b-link>
+                        <b-link :to="{ name: 'AboutUs' }">About Us</b-link>
                     </b-navbar-nav>
                 </b-collapse>
             </b-navbar>
@@ -45,6 +44,10 @@ export default {
 nav ul{
     display: flex;
     align-items: flex-end;
+    padding-bottom: 5px;
+}
+ul a{
+    color: #9299A1;
 }
 @media screen and (min-width: 992px){
     nav ul{
