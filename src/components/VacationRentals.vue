@@ -2,8 +2,11 @@
     <div class="vacation-rentals container">
         <h3>Vacation Rentals</h3>
         <div class="" v-for="rental in vacarentals" :key="rental.id">
-            <b-img  src="../assets/the-cottage/main.jpg" class="main-photo" />
-            <b-img :src="getPic(image)" class="main-photo"/>
+            <!-- <b-img  src="../assets/the-cottage/main.jpg" class="main-photo" />
+            <b-img :src="getPic(image)" class="main-photo"/> -->
+            <router-link :to="{ name: 'Rental', params: { rental_slug: rental.slug } }">
+                <b-img :src="getPicUrl(rental)" class="main-photo" />
+            </router-link>
             <p>{{ rental.title }}</p>
             <p>{{ rental.mainphoto }}</p>
             <ul class="highlights">
@@ -28,6 +31,10 @@ export default {
         getPic(image){
             var images = require.context('../assets/', true, /\.jpg$/)
             return images('./' + image)
+        },
+        getPicUrl(rental){
+            var images = require.context('../assets/', true, /\.jpg$/)
+            return images('./' + rental.mainphoto)
         }
     },
     created(){

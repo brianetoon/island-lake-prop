@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import VacationRentals from '@/components/VacationRentals'
 import Testimonials from '@/components/Testimonials'
 import AboutUs from '@/components/AboutUs'
+import Rental from '@/components/Rental'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/about-us',
       name: 'AboutUs',
       component: AboutUs
+    },
+    {
+      path: '/vacation-rentals/:rental_slug',
+      name: 'Rental',
+      component: Rental
     }
   ]
 })
