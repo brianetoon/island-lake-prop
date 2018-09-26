@@ -1,5 +1,7 @@
 <template>
-    <h2>Testimonials</h2>
+    <div class="container">
+        <h2>Testimonials</h2>
+    </div>
 </template>
 
 <script>

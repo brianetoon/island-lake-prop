@@ -1,15 +1,23 @@
 <template>
-    <div class="vacation-rentals container">
-        <h3>Vacation Rentals</h3>
-        <div class="row" v-for="rental in vacarentals" :key="rental.id">
-            <router-link :to="{ name: 'Rental', params: { rental_slug: rental.slug } }">
-                <b-img :src="getPicUrl(rental)" class="main-photo" />
-            </router-link>
-            <p>{{ rental.title }}</p>
-            <p>{{ rental.mainphoto }}</p>
-            <ul class="highlights">
-                <li v-for="(highlight, index) in rental.highlights" :key="index"><p>{{ highlight }}</p></li>
-            </ul>
+    <div class="vacation-rentals container pt-4">
+        <div class="row pb-4" v-for="rental in vacarentals" :key="rental.id">
+
+            <div class="col-md-5 order-md-2 pt-lg-4">
+                <h2 class="title">{{ rental.title }}</h2>
+                <p class="highlights" v-for="(highlight, index) in rental.highlights" :key="index">
+                    {{ highlight }}
+                </p>
+                <router-link class="more-info-link" :to="{ name: 'Rental', params: { rental_slug: rental.slug } }">
+                    <p>More information about {{ rental.title }}</p>
+                </router-link>
+            </div>
+            
+            <div class="col-md-7 order-md-1">
+                <router-link :to="{ name: 'Rental', params: { rental_slug: rental.slug } }">
+                    <b-img :src="getPicUrl(rental)" class="main-photo" />
+                </router-link>
+            </div>
+            
         </div>
     </div>
 </template>
@@ -47,7 +55,25 @@ export default {
 
 <style>
 .main-photo{
-    max-width: 500px;
+    width: 100%;
     height: auto;
+}
+.title{
+    color: #2A3B4E;
+    font-size: 1.2em;
+    font-family: "aviano-flare",sans-serif;
+}
+.highlights{
+    color:  #5F656C;
+    font-size: 1.1em;
+    font-family: "myriad-pro",sans-serif;
+}
+.more-info-link{
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4bc3c9;
+}
+.more-info-link:hover{
+    color: #4bc3c9;
 }
 </style>

@@ -9,8 +9,17 @@
             <b-img :src="getSliderPic(rental, index)" class="main-photo" />
         </div> -->
 
-        <div class="row">
-            <div class="pt-4 col-sm-12 col-md-7">
+        <div class="row pb-4">
+
+            <div class="rental-info col-lg-5 order-lg-2">
+                <h2>{{ rental.title }}</h2>
+                <p class="stats">
+                    {{ rental.guests }} guests &middot; {{ rental.bedrooms }} bedrooms &middot; {{ rental.beds }} beds &middot; {{ rental.baths }} baths
+                </p>
+                <p class="details d-none d-lg-block" v-for="(detail, index) in rental.details" :key="index">{{ detail }}</p>
+            </div>
+
+            <div class="pt-2 col-lg-7 order-lg-1">
                 <b-carousel id="carousel1"
                     style="text-shadow: 1px 1px 2px #333;"
                     controls
@@ -29,14 +38,15 @@
                     </b-carousel-slide>
 
                 </b-carousel>
-            </div>
-
-            <div class="rental-info col-sm-12 col-md-5">
-                <h2>{{ rental.title }}</h2>
-                <p class="stats">
-                    {{ rental.guests }} guests &middot; {{ rental.bedrooms }} bedrooms &middot; {{ rental.beds }} beds &middot; {{ rental.baths }} baths
-                </p>
-                <p class="details" v-for="(detail, index) in rental.details" :key="index">{{ detail }}</p>
+                
+                <div class="details-sm d-lg-none pt-3">
+                    <p class="details-sm" v-for="(detail, index) in rental.details" :key="index">{{ detail }}</p>
+                </div>
+                <div class="contact text-center pt-4">
+                    <p>To book a stay or for more information, please contact Aaron:</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> Email: aaron@islandlakepropertiesllc.com <br>
+                    <i class="fas fa-phone"></i> Phone: 734-417-3235</p>
+                </div>
             </div>
             
         </div>
@@ -58,12 +68,12 @@ export default {
     methods: {
         getPicUrl(rental){
             var images = require.context('../assets/', true, /\.jpg$/)
-            console.log(images('./' + rental.mainphoto))
+            // console.log(images('./' + rental.mainphoto))
             return images('./' + rental.mainphoto)
         },
         getSliderPic(rental, index){
             var images = require.context('../assets/', true, /\.jpg$/)
-            console.log(images('./' + rental.sliderimages[index]))
+            // console.log(images('./' + rental.sliderimages[index]))
             return images('./' + rental.sliderimages[index])
         },
         onSlideStart (slide) {
@@ -90,7 +100,7 @@ export default {
 <style>
 .rental-info h2{
     color: #2A3B4E;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: "aviano-flare",sans-serif;
 }
 .details {
@@ -98,11 +108,25 @@ export default {
     font-size: 1.1em;
     font-family: "myriad-pro",sans-serif;
 }
+.details-sm{
+    color:  #5F656C;
+    font-size: 1.1em;
+    font-family: "myriad-pro",sans-serif;
+}
+.contact{
+    color:  #5F656C;
+    font-size: 1.1em;
+    font-family: "myriad-pro",sans-serif;
+    font-weight: bold;
+}
 .stats{
     font-weight: bold;
-    color:  #5F656C;
+    color:  #2A3B4E;
     font-size: 1.2em;
     font-family: "myriad-pro",sans-serif;
+}
+.contact-info{
+    color: #4bc3c9;
 }
 </style>
 
