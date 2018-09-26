@@ -22,10 +22,10 @@
         </div>
         <div class="col-md-12 col-lg-4">
           <div class="box">
-            <b-img src="../assets/faqs.png" class="box-img" alt="vacation rentals"/>
-            <h3 class="pt-2">FAQs</h3>
+            <b-img src="../assets/testimonials.png" class="box-img" alt="vacation rentals"/>
+            <h3 class="pt-2">Testimonials</h3>
             <div class="text-area">
-              <p>What to pack? Nearby attractions? Find out all you need to know for a perfect getaway.</p>
+              <p>Our guests share their experiences while staying at one of our properties.</p>
             </div>
             <div class="d-none d-lg-block">
               <b-img src="../assets/car.png" class="box-icon" alt="car icon"/>
@@ -81,7 +81,7 @@ export default {
 }
 .box h3{
   color: #2A3B4E;
-  font-size: 20px;
+  font-size: 1.2em;
   font-family: "aviano-flare",sans-serif;
 }
 .box-img{
@@ -98,8 +98,8 @@ export default {
   width: auto;
 }
 .text-area p{
-  color:  #2A3B4E;
-  font-size: 1.2em;
+  color:  #5F656C;
+  font-size: 1.1em;
 }
 @media screen and (min-width: 992px){
   .text-area{
