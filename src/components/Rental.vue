@@ -113,7 +113,7 @@ export default {
     font-size: 1.1em;
     font-family: "myriad-pro",sans-serif;
 }
-.contact{
+.contact p{
     color:  #5F656C;
     font-size: 1.1em;
     font-family: "myriad-pro",sans-serif;
@@ -125,7 +125,7 @@ export default {
     font-size: 1.2em;
     font-family: "myriad-pro",sans-serif;
 }
-.contact-info{
+.contact .contact-info{
     color: #4bc3c9;
 }
 </style>

@@ -47,6 +47,7 @@ export default {
                 let rental = doc.data()
                 rental.id = doc.id
                 this.vacarentals.push(rental)
+                console.log(this.vacarentals)
             })
         })
     }
@@ -75,5 +76,6 @@ export default {
 }
 .more-info-link:hover{
     color: #4bc3c9;
+    text-decoration: none;
 }
 </style>

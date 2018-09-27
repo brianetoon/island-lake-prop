@@ -10,8 +10,10 @@
       <div class="row">
         <div class="col-md-12 col-lg-4">
           <div class="box">
-            <b-img src="../assets/vaca-rental.png" class="box-img" alt="vacation rentals"/>
-            <h3 class="pt-2">Vacation Rentals</h3>
+            <b-link class="box-link" :to="{ name: 'VacationRentals' }">
+              <b-img src="../assets/vaca-rental.png" class="box-img" alt="vacation rentals"/>
+              <h3 class="pt-2">Vacation Rentals</h3>
+            </b-link>
             <div class="text-area">
               <p>See our vacation homes and learn about all the amenities they offer.</p>
             </div>
@@ -22,8 +24,10 @@
         </div>
         <div class="col-md-12 col-lg-4">
           <div class="box">
-            <b-img src="../assets/testimonials.png" class="box-img" alt="vacation rentals"/>
-            <h3 class="pt-2">Testimonials</h3>
+            <b-link class="box-link" :to="{ name: 'Testimonials' }">
+              <b-img src="../assets/testimonials.png" class="box-img" alt="vacation rentals"/>
+              <h3 class="pt-2">Testimonials</h3>
+            </b-link>
             <div class="text-area">
               <p>Our guests share their experiences while staying at one of our properties.</p>
             </div>
@@ -34,8 +38,10 @@
         </div>
         <div class="col-md-12 col-lg-4">
           <div class="box">
-            <b-img src="../assets/about-us.png" class="box-img d-block" alt="vacation rentals"/>
-            <h3 class="pt-2">About Us</h3>
+            <b-link class="box-link" :to="{ name: 'AboutUs' }">
+              <b-img src="../assets/about-us.png" class="box-img d-block" alt="vacation rentals"/>
+              <h3 class="pt-2">About Us</h3>
+            </b-link>
             <div class="text-area">
               <p>Our Mission is to share the great times our family has enjoyed by providing welcoming 
               vacation homes and unmatched service.</p>
@@ -91,6 +97,9 @@ export default {
 .box-icon{
   width: 150px;
   height: auto;
+}
+.box-link:hover{
+  text-decoration: none;
 }
 .text-area{
   display: flex;
