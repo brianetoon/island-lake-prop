@@ -4,9 +4,9 @@
         <div class="row pt-3" v-for="(rental, index) in vacarentals" :key="index">
             <div class="col">
                 <h2 class="title text-center pb-3">{{ rental.title }}</h2>
-                <blockquote class="blockquote text-center pb-3" v-for="(testimonial, index) in rental.testimonials" :key="index">
+                <blockquote class="blockquote pb-3" v-for="(testimonial, index) in rental.testimonials" :key="index">
                     <p class="comment mb-0">"{{ testimonial.comment }}"</p>
-                    <footer class="blockquote-footer">{{ testimonial.author }}, {{ testimonial.date }}</footer>
+                    <footer class="text-center author-date">{{ testimonial.author }} - {{ testimonial.date }}</footer>
                 </blockquote>
             </div>
         </div>
@@ -48,12 +48,12 @@ export default {
     font-size: 1.2em;
     font-family: "aviano-flare",sans-serif;
 }
-blockquote p{
+blockquote .comment {
     color:  #5F656C;
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: "myriad-pro",sans-serif;
 }
-.blockquote-footer{
+.author-date{
     color: #4bc3c9;
     font-size: 1em;
     font-weight: bold;

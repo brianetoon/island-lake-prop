@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="main-footer">
         <p class="text-center">&copy; 2018 Island Lake Properties, LLC</p>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style>
-.footer {
+.main-footer {
     background-image: url("../assets/footer-bg.png");
     background-position: left;
     background-size: cover;
@@ -24,7 +24,7 @@ export default {
     display: flex;
     justify-content: center;
 }
-.footer p{
+.main-footer p{
     color: white;
     font-family: "aviano-flare",sans-serif;
     padding: 15px;
