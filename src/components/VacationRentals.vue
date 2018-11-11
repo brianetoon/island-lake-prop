@@ -1,6 +1,6 @@
 <template>
     <div class="vacation-rentals container pt-4">
-        <div class="row pb-4" v-for="rental in vacarentals" :key="rental.id">
+        <div class="row pb-5" v-for="rental in vacarentals" :key="rental.id">
 
             <div class="col-md-5 order-md-2 pt-lg-4">
                 <h2 class="title">{{ rental.title }}</h2>
@@ -47,7 +47,6 @@ export default {
                 let rental = doc.data()
                 rental.id = doc.id
                 this.vacarentals.push(rental)
-                console.log(this.vacarentals)
             })
         })
     }
